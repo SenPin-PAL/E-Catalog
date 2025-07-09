@@ -1,4 +1,4 @@
-const historyData = [
+    const historyData = [
     {
         "era": "Era Kolonial",
         "title": "1822 - 1939: Era Kolonial",
