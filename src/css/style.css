@@ -55,7 +55,7 @@ body {
 
 /* Back to Home Button */
 .main-nav {
-    position: fixed; top: 20px; left: 20px; z-index: 1000;
+    position: fixed; bottom: 20px; left: 50%; z-index: 1000; transform: translateX(-50%);
 }
 .nav-button {
     background: rgba(255, 255, 255, 0.1); border: 1px solid var(--secondary-color); color: var(--text-color); padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 1em; transition: all 0.3s ease;
@@ -148,7 +148,7 @@ body {
     transition-delay: 0.8s;
 }
 .profile-column p.reveal:nth-of-type(4) {
-    transition-delay: 1s;
+    transition-delay: 0.9s;
 }
 
 /* 4. Products Page */
