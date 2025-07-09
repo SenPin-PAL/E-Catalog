@@ -27,6 +27,20 @@
             "year": 2005,
             "image": "src/images/products/niaga/mt_pagerungan.jpg",
             "specs": "Tipe/Kelas: Tanker Minyak\nBobot Mati: 17.500 DWT\nKeterangan: Melanjutkan produksi kapal tanker kelas 17.500 DWT, menunjukkan standardisasi desain."
+        },
+        {
+            "id": "niaga-05",
+            "name": "xxxxxxx",
+            "year": 1985,
+            "image": "src/images/products/niaga/mt_minas.jpg",
+            "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 3.500 DWT\nKeterangan: Bagian dari program pengadaan kapal tanker untuk memperkuat armada distribusi energi nasional."
+        },
+        {
+            "id": "niaga-06",
+            "name": "xxxxxxx",
+            "year": 1985,
+            "image": "src/images/products/niaga/mt_minas.jpg",
+            "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 3.500 DWT\nKeterangan: Bagian dari program pengadaan kapal tanker untuk memperkuat armada distribusi energi nasional."
         }
     ],
     "militer": [
