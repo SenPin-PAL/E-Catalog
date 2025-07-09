@@ -1,0 +1,26 @@
+[
+    {
+        "era": "Era Kolonial",
+        "title": "1822 - 1939: Era Kolonial",
+        "description": "Berawal dari inisiatif Gubernur Jendral Van Der Capellen pada 1822 untuk mendukung Armada Laut Kerajaan Belanda. Pada 1939, galangan resmi dibuka dengan nama Marine Establishment (ME) dan menjadi yang terbesar di Asia.",
+        "image": "src/images/history/kolonial.jpg"
+    },
+    {
+        "era": "Era Pendudukan",
+        "title": "1942 - 1945: Era Pendudukan Jepang",
+        "description": "Pada tahun 1942, ME dikuasai Jepang dan namanya diubah menjadi Nagamatsu Butai, lalu Kaigunse 21-24 Butai. Jepang juga mendirikan pelatihan militer ala PETA bernama Hokodan.",
+        "image": "src/images/history/pendudukan.jpg"
+    },
+    {
+        "era": "Orde Lama",
+        "title": "1945 - 1960an: Era Orde Lama & Nasionalisasi",
+        "description": "Setelah Proklamasi 1945, aset galangan diserahkan ke pemerintah Indonesia dan dinasionalisasi, berganti nama menjadi Penataran Angkatan Laut (PAL). PAL menjadi bagian dari upaya membangun kekuatan maritim nasional.",
+        "image": "src/images/history/nasionalisasi.jpg"
+    },
+    {
+        "era": "Orde Baru",
+        "title": "1980 - Era Modern PT. PAL",
+        "description": "Pada 15 April 1980, perusahaan resmi bertransformasi menjadi PT PAL Indonesia (Persero) melalui PP No. 4 Tahun 1980. Kemudian pada tahun 1985, diresmikan oleh Presiden Soeharto sebagai galangan kapal modern.",
+        "image": "src/images/history/modern.jpg"
+    }
+]

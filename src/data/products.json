@@ -1,0 +1,97 @@
+{
+    "niaga": [
+        {
+            "id": "niaga-01",
+            "name": "MT Minas & MT Melahin",
+            "year": 1985,
+            "image": "src/images/products/niaga/mt_minas.jpg",
+            "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 3.500 DWT\nKeterangan: Bagian dari program pengadaan kapal tanker untuk memperkuat armada distribusi energi nasional."
+        },
+        {
+            "id": "niaga-02",
+            "name": "MT Kurau",
+            "year": 1992,
+            "image": "src/images/products/niaga/mt_kurau.jpg",
+            "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 6.500 DWT\nKeterangan: Menandai peningkatan kapasitas produksi tanker oleh PT PAL."
+        },
+        {
+            "id": "niaga-03",
+            "name": "MT Palu Sipat",
+            "year": 2000,
+            "image": "src/images/products/niaga/mt_palusipat.jpg",
+            "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 17.500 DWT\nKeterangan: Lompatan signifikan dalam kemampuan pembangunan kapal tanker."
+        },
+        {
+            "id": "niaga-04",
+            "name": "MT Pagerungan & MT P. Brandan",
+            "year": 2005,
+            "image": "src/images/products/niaga/mt_pagerungan.jpg",
+            "specs": "Tipe/Kelas: Tanker Minyak\nBobot Mati: 17.500 DWT\nKeterangan: Melanjutkan produksi kapal tanker kelas 17.500 DWT, menunjukkan standardisasi desain."
+        }
+    ],
+    "militer": [
+        {
+            "id": "militer-01",
+            "name": "KRI Makassar (590)",
+            "year": 2007,
+            "image": "src/images/products/militer/kri_makassar.jpg",
+            "specs": "Tipe/Kelas: Landing Platform Dock (LPD)\nPemesan: TNI Angkatan Laut\nSpesifikasi: Panjang 122m, Kapasitas 35 kendaraan, 3 helikopter, 500+ personel.\nKeterangan: Kapal LPD pertama yang dibuat PT PAL, menjadi tulang punggung operasi amfibi."
+        },
+        {
+            "id": "militer-02",
+            "name": "KRI Banjarmasin (592)",
+            "year": 2009,
+            "image": "src/images/products/militer/kri_banjarmasin.jpg",
+            "specs": "Tipe/Kelas: Landing Platform Dock (LPD)\nPemesan: TNI Angkatan Laut\nKeterangan: Kapal kedua dari kelas Makassar yang diproduksi di dalam negeri."
+        },
+        {
+            "id": "militer-03",
+            "name": "KRI Banda Aceh (593)",
+            "year": 2011,
+            "image": "src/images/products/militer/kri_bandaaceh.jpg",
+            "specs": "Tipe/Kelas: Landing Platform Dock (LPD)\nPemesan: TNI Angkatan Laut\nSpesifikasi: Panjang 125 meter, dengan beberapa penyempurnaan dari generasi sebelumnya.\nKeterangan: Dianggap sebagai LPD generasi lanjutan."
+        },
+        {
+            "id": "militer-04",
+            "name": "KRI Sampari (628)",
+            "year": 2013,
+            "image": "src/images/products/militer/kri_sampari.jpg",
+            "specs": "Tipe/Kelas: Kapal Cepat Rudal (KCR-60M)\nPemesan: TNI Angkatan Laut\nSpesifikasi: Panjang 60m, Kecepatan 28 knot, Rudal anti-kapal.\nKeterangan: Kapal pertama dari kelas KCR-60M andalan TNI AL."
+        },
+        {
+            "id": "militer-05",
+            "name": "BRP Tarlac (LD-601)",
+            "year": 2016,
+            "image": "src/images/products/militer/brp_tarlac.jpg",
+            "specs": "Tipe/Kelas: Strategic Sealift Vessel (SSV)\nPemesan: Angkatan Laut Filipina\nSpesifikasi: Panjang 123m, Kapasitas 500+ pasukan, 2 LCU, 2-3 helikopter.\nKeterangan: Kapal perang terbesar pertama yang berhasil diekspor oleh Indonesia."
+        },
+        {
+            "id": "militer-06",
+            "name": "KRI R.E. Martadinata (331)",
+            "year": 2016,
+            "image": "src/images/products/militer/kri_rem.jpg",
+            "specs": "Tipe/Kelas: Fregat PKR / SIGMA 10514\nPemesan: TNI Angkatan Laut\nPersenjataan: Meriam utama 76mm, rudal anti-kapal Exocet, rudal pertahanan udara VL MICA, torpedo.\nKeterangan: Fregat paling modern TNI AL, dibangun melalui transfer teknologi."
+        },
+        {
+            "id": "militer-07",
+            "name": "Kapal Selam Kelas Nagapasa",
+            "year": 2017,
+            "image": "src/images/products/militer/ks_nagapasa.jpg",
+            "specs": "Tipe/Kelas: Kapal Selam Serang / Type 209/1400\nPemesan: TNI Angkatan Laut\nPersenjataan: 8 tabung torpedo 533mm untuk torpedo Black Shark & rudal Harpoon.\nKeterangan: Proyek kerja sama dengan DSME Korea Selatan, menandai transfer teknologi kapal selam."
+        },
+        {
+            "id": "militer-08",
+            "name": "KRI Semarang (594)",
+            "year": 2018,
+            "image": "src/images/products/militer/kri_semarang.jpg",
+            "specs": "Tipe/Kelas: LPD / Kapal Bantu Rumah Sakit\nPemesan: TNI Angkatan Laut\nFasilitas Medis: Setara rumah sakit tipe C (UGD, ICU, Ruang Operasi).\nKeterangan: Berfungsi ganda sebagai kapal angkut amfibi dan kapal bantu rumah sakit."
+        },
+        {
+            "id": "militer-09",
+            "name": "KRI Kapak (625) & KRI Panah (626)",
+            "year": 2023,
+            "image": "src/images/products/militer/kri_kapak.jpg",
+            "specs": "Tipe/Kelas: Kapal Cepat Rudal (KCR-60M)\nPemesan: TNI Angkatan Laut\nDesain: Menggunakan desain stealth yang lebih baik dari batch sebelumnya.\nKeterangan: KCR-60M generasi termutakhir dengan kemampuan tempur yang ditingkatkan."
+        }
+    ]
+}

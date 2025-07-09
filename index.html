@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. PAL E-Catalog</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <button id="back-to-home" class="nav-button hidden">🏠 Back to Home</button>
+    </nav>
+    
+    <main id="app-container">
+
+        <section id="page-landing" class="page">
+            <div class="landing-content">
+                <img src="src/images/logo.png" alt="Company Logo" class="logo">
+                <h1>Driving Synergy to Global Maritime Access</h1>
+                <p>PT. PAL INDONESIA (Persero)</p>
+            </div>
+            <div class="card-container">
+                <div class="card" data-page="page-history">
+                    <h2>History</h2>
+                    <p>Jelajahi tonggak sejarah perusahaan.</p>
+                </div>
+                <div class="card" data-page="page-profile">
+                    <h2>Profile</h2>
+                    <p>Kenali lebih jauh tentang kami.</p>
+                </div>
+                <div class="card" data-page="page-products">
+                    <h2>Products</h2>
+                    <p>Lihat lini produk unggulan kami.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-history" class="page hidden">
+             <h2 class="section-title">Sejarah PT. PAL</h2>
+            <div class="history-container">
+                <div class="steering-wheel-container">
+                    <img src="src/images/steering-wheel.png" alt="Steering Wheel" class="steering-wheel">
+                    </div>
+                <div id="history-panel" class="history-panel">
+                    <h3>Pilih Sebuah Era</h3>
+                    <p>Klik salah satu gagang setir untuk melihat tonggak sejarah kami.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="page-profile" class="page hidden">
+            <div class="profile-container">
+                <div class="profile-column reveal">
+                    <img src="src/images/profile/great-asset.jpg" alt="Great Asset Behind The Best Products">
+                    <h3 class="image-caption">Great Asset Behind The Best Products</h3>
+                </div>
+                <div class="profile-column">
+                    <h2 class="section-title reveal">WHO WE ARE</h2>
+                    <p class="reveal">
+                        PT PAL INDONESIA (Persero) adalah industri strategis yang memproduksi alat utama sistem pertahanan Indonesia, khususnya untuk matra laut. Keberadaan kami memiliki peran penting dalam mendukung pengembangan industri kelautan nasional.
+                    </p>
+                    <p class="reveal">
+                        Usaha PT PAL INDONESIA (Persero) merupakan langkah besar Indonesia untuk memasuki industri global di bidang pertahanan.
+                    </p>
+                    <p class="reveal">
+                        Sebagai pemandu utama alutsista matra laut, PT PAL INDONESIA (Persero) akan terus meningkatkan kemampuannya untuk dapat berperan dalam "Driving Synergy to Global Maritime Access".
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="page-products" class="page hidden">
+            <div class="product-subsection">
+                <h2 class="section-title">Armada Kapal Niaga</h2>
+                <p class="section-subtitle">Jelajahi lini kapal komersial kami melalui linimasa interaktif.</p>
+                <div class="timeline-container-wrapper">
+                    <div id="niaga-timeline" class="timeline-container">
+                        </div>
+                </div>
+            </div>
+            <div class="product-subsection">
+                <h2 class="section-title">Armada Kapal Militer</h2>
+                <p class="section-subtitle">Lihat kontribusi kami dalam teknologi pertahanan maritim.</p>
+                <div class="timeline-container-wrapper">
+                    <div id="militer-timeline" class="timeline-container">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="product-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img id="modal-img" src="" alt="Product Image">
+            <h2 id="modal-name"></h2>
+            <p id="modal-specs"></p>
+        </div>
+    </div>
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
