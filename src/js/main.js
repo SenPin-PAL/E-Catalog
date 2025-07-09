@@ -2,34 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Memastikan variabel data dari data.js sudah ada sebelum memulai
     if (typeof historyData === 'undefined' || typeof productsData === 'undefined') {
         console.error("Kesalahan Kritis: Variabel data (historyData atau productsData) tidak ditemukan. Pastikan file 'src/js/data.js' sudah dimuat dengan benar sebelum 'src/js/main.js' di file HTML Anda.");
-        // Menampilkan pesan error di halaman jika data tidak ada
         const productPage = document.getElementById('page-products');
         if(productPage) {
             productPage.innerHTML = '<p class="no-data-message">Gagal memuat data produk. Silakan periksa konsol browser (F12) untuk detail teknis.</p>';
         }
-        return; // Menghentikan eksekusi skrip
+        return;
     }
     
-    // --- DOM Elements ---
+    // --- DOM Elements & SPA Navigation ---
     const allPages = document.querySelectorAll('.page');
-    
-    // --- FUNGSI UTAMA ---
-
-    // Fungsi untuk navigasi antar halaman virtual (SPA)
     const navigateTo = (pageId) => {
-        window.scrollTo(0, 0); // Selalu kembali ke atas saat pindah halaman
+        window.scrollTo(0, 0);
         allPages.forEach(page => page.classList.add('hidden'));
         const targetPage = document.getElementById(pageId);
-        if (targetPage) {
-            targetPage.classList.remove('hidden');
-        }
-        // Inisialisasi animasi scroll hanya saat halaman profil dibuka
-        if (pageId === 'page-profile') {
-            initProfileScrollReveal();
-        }
+        if (targetPage) targetPage.classList.remove('hidden');
+        if (pageId === 'page-profile') initProfileScrollReveal();
     };
-    
-    // Fungsi untuk inisialisasi animasi scroll-reveal di halaman profil
+    document.querySelectorAll('.card').forEach(card => card.addEventListener('click', () => navigateTo(card.dataset.page)));
+    document.querySelectorAll('.back-button').forEach(button => button.addEventListener('click', () => navigateTo('page-landing')));
+
+    // --- Page Initializations ---
+
     const initProfileScrollReveal = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -45,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Fungsi untuk inisialisasi Halaman Sejarah
     const initHistoryPage = () => {
         const container = document.getElementById('era-stands-container');
         const modal = document.getElementById('history-modal');
@@ -80,14 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Fungsi untuk inisialisasi Halaman Produk dengan layout Master-Detail
     const initProductsPage = () => {
         const intervalListEl = document.getElementById('interval-list');
         const shipDisplayAreaEl = document.getElementById('ship-display-area');
-        if (!intervalListEl || !shipDisplayAreaEl) {
-            console.error("Elemen untuk halaman produk tidak ditemukan.");
-            return;
-        }
+        if (!intervalListEl || !shipDisplayAreaEl) return;
 
         const intervals = [
             { start: 1985, end: 1989 }, { start: 1990, end: 1994 },
@@ -96,12 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
             { start: 2015, end: 2019 }, { start: 2020, end: 2024 },
         ];
         
-        const allShips = [...productsData.niaga, ...productsData.militer].sort((a, b) => a.year - b.year);
+        const allShips = [...(productsData.niaga || []), ...(productsData.militer || [])].sort((a, b) => a.year - b.year);
 
         const renderShipList = (start, end) => {
             const shipsInInterval = allShips.filter(p => p.year >= start && p.year <= end);
-            
-            shipDisplayAreaEl.innerHTML = ''; // Kosongkan dulu area tampilan
+            shipDisplayAreaEl.innerHTML = '';
             
             if (shipsInInterval.length === 0) {
                 shipDisplayAreaEl.innerHTML = `<p class="no-data-message">Tidak ada kapal yang tercatat pada periode ini.</p>`;
@@ -119,23 +106,35 @@ document.addEventListener('DOMContentLoaded', () => {
             `).join('');
         };
 
-        intervalListEl.innerHTML = intervals.map(interval => `
-            <li data-start="${interval.start}" data-end="${interval.end}">
-                ${interval.start} - ${interval.end}
-            </li>
-        `).join('');
+        // --- LOGIKA DIPERBARUI DI SINI ---
+        // Buat daftar interval di kolom kiri, HANYA jika ada kapal di dalamnya
+        intervalListEl.innerHTML = intervals.map(interval => {
+            // Cek apakah ada setidaknya satu kapal dalam rentang tahun ini
+            const hasShips = allShips.some(ship => ship.year >= interval.start && ship.year <= interval.end);
+            
+            // Jika ada (hasShips bernilai true), buat elemen list-nya
+            if (hasShips) {
+                return `
+                    <li data-start="${interval.start}" data-end="${interval.end}">
+                        ${interval.start} - ${interval.end}
+                    </li>
+                `;
+            }
+            // Jika tidak ada, kembalikan string kosong agar tidak dirender
+            return '';
+        }).join('');
 
         intervalListEl.addEventListener('click', (e) => {
             if (e.target.tagName === 'LI') {
                 intervalListEl.querySelectorAll('li').forEach(li => li.classList.remove('active'));
                 e.target.classList.add('active');
-
                 const start = e.target.dataset.start;
                 const end = e.target.dataset.end;
                 renderShipList(start, end);
             }
         });
 
+        // Tampilkan data untuk interval pertama yang tersedia secara default
         const firstInterval = intervalListEl.querySelector('li');
         if (firstInterval) {
             firstInterval.click();
@@ -144,17 +143,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // --- INISIALISASI APLIKASI ---
+    // --- MAIN APP INITIALIZATION ---
     const initializeApp = () => {
-        // Menambahkan event listener ke semua tombol navigasi
-        document.querySelectorAll('.card').forEach(card => card.addEventListener('click', () => navigateTo(card.dataset.page)));
-        document.querySelectorAll('.back-button').forEach(button => button.addEventListener('click', () => navigateTo('page-landing')));
-        
-        // Menjalankan fungsi inisialisasi untuk setiap halaman
         initHistoryPage();
         initProductsPage();
-        
-        // Memulai aplikasi dengan menampilkan landing page
+        initProfileScrollReveal();
         navigateTo('page-landing');
     };
 
