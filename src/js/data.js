@@ -29,7 +29,7 @@ const productsData = {
     "niaga": [
         {
             "id": "niaga-01", "year": 1985, "name": "MT Minas & MT Melahin",
-            "image": "src/images/products/niaga/mt_minas.jpg",
+            "image": "src/images/halaman_utama.jpg",
             "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 3.500 DWT\nKeterangan: Bagian dari program pengadaan kapal tanker untuk memperkuat armada distribusi energi nasional."
         },
         {
@@ -49,12 +49,12 @@ const productsData = {
         },
         {
             "id": "niaga-05", "name": "xxxxxxx", "year": 1985,
-            "image": "src/images/products/niaga/mt_minas.jpg",
+            "image": "src/images/halaman_utama.jpg",
             "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 3.500 DWT\nKeterangan: Bagian dari program pengadaan kapal tanker untuk memperkuat armada distribusi energi nasional."
         },
         {
             "id": "niaga-06", "name": "xxxxxxx", "year": 1985,
-            "image": "src/images/products/niaga/mt_minas.jpg",
+            "image": "src/images/halaman_utama.jpg",
             "specs": "Tipe/Kelas: Tanker Minyak\nPemesan: Pertamina\nBobot Mati: 3.500 DWT\nKeterangan: Bagian dari program pengadaan kapal tanker untuk memperkuat armada distribusi energi nasional."
         }
     ],
