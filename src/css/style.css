@@ -14,8 +14,13 @@ body {
 }
 .hidden { display: none !important; }
 .page {
-    min-height: 100vh; width: 100%; display: flex; flex-direction: column;
-    justify-content: center; align-items: center; padding: 80px 40px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px 100px; 
     animation: fadeIn 0.8s ease-in-out;
     position: relative;
 }
@@ -25,12 +30,30 @@ body {
 
 /* Tombol Kembali */
 .back-button {
-    position: absolute; bottom: 5px; left: 50%; z-index: 10; transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.1); border: 1px solid var(--secondary-color);
-    color: var(--text-color); padding: 20px 30px; border-radius: 5px;
-    cursor: pointer; font-size: 1em; transition: all 0.3s ease;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, var(--primary-color), #1a4d8c); 
+    border: 2px solid var(--secondary-color); 
+    color: var(--text-color);
+    padding: 15px 35px; 
+    border-radius: 50px; 
+    cursor: pointer;
+    font-size: 1.1em; 
+    font-weight: bold; 
+    letter-spacing: 0.5px; 
+    transition: all 0.4s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    text-transform: uppercase; 
 }
-.back-button:hover { background: var(--secondary-color); color: var(--primary-color); }
+.back-button:hover { 
+    background: linear-gradient(45deg, var(--secondary-color), #e0c28c); 
+    color: var(--primary-color);
+    transform: translateX(-50%) translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(212, 172, 110, 0.6); 
+}
 
 /*Landing Page*/
 #page-landing { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/halaman_utama2.jpg'); background-size: cover; background-position: center; }
